@@ -1,18 +1,36 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
+      "idiom" : "mac",
       "filename" : "shortcut-recorder-bezel-editing-right.png",
       "scale" : "1x"
     },
     {
-      "idiom" : "universal",
+      "idiom" : "mac",
+      "filename" : "shortcut-recorder-bezel-dark-editing-right.png",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "mac",
       "filename" : "shortcut-recorder-bezel-editing-right@2x.png",
       "scale" : "2x"
     },
     {
-      "idiom" : "universal",
-      "scale" : "3x"
+      "idiom" : "mac",
+      "filename" : "shortcut-recorder-bezel-dark-editing-right@2x.png",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "scale" : "2x"
     }
   ],
   "info" : {
