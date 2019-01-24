@@ -39,7 +39,7 @@
 {
     [super awakeFromNib];
 
-    [self.pingShortcutRecorder setAllowedModifierFlags:NSShiftKeyMask | NSAlternateKeyMask | NSCommandKeyMask
+    [self.pingShortcutRecorder setAllowedModifierFlags:NSEventModifierFlagShift | NSEventModifierFlagOption | NSEventModifierFlagCommand
                                  requiredModifierFlags:0
                               allowsEmptyModifierFlags:NO];
 

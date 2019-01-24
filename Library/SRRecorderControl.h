@@ -219,8 +219,6 @@ IB_DESIGNABLE
     Returns rect for label with given attributes.
 
     @param  aLabel Label for drawing.
-
-    @param  anAttributes A dictionary of NSAttributedString text attributes to be applied to the string.
  */
 - (NSRect)rectForLabel:(NSAttributedString *)aLabel;
 

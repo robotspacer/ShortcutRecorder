@@ -20,7 +20,7 @@
     SRRecorderControl *pingShortcutRecorder = [[SRRecorderControl alloc] initWithFrame:NSZeroRect];
     pingShortcutRecorder.delegate = self;
     pingShortcutRecorder.enabled = NO;
-    [pingShortcutRecorder setAllowedModifierFlags:NSShiftKeyMask | NSAlternateKeyMask | NSCommandKeyMask
+    [pingShortcutRecorder setAllowedModifierFlags:NSEventModifierFlagShift | NSEventModifierFlagOption | NSEventModifierFlagCommand
                             requiredModifierFlags:0
                          allowsEmptyModifierFlags:NO];
     SRRecorderControl *globalPingShortcutRecorder = [[SRRecorderControl alloc] initWithFrame:NSZeroRect];
