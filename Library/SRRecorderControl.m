@@ -193,6 +193,7 @@ typedef NS_ENUM(NSUInteger, _SRRecorderControlButtonTag)
     if (!self.isRecording)
     {
         NSAccessibilityPostNotification(self, NSAccessibilityTitleChangedNotification);
+        NSAccessibilityPostNotificationWithUserInfo(self, NSAccessibilityLayoutChangedNotification, @{NSAccessibilityUIElementsKey: self});
         [self setNeedsDisplay:YES];
     }
 }
@@ -225,7 +226,10 @@ typedef NS_ENUM(NSUInteger, _SRRecorderControlButtonTag)
 
     [self updateTrackingAreas];
     [self setToolTip:SRLoc(@"Type shortcut")];
+
     NSAccessibilityPostNotification(self, NSAccessibilityTitleChangedNotification);
+    NSAccessibilityPostNotificationWithUserInfo(self, NSAccessibilityLayoutChangedNotification, @{NSAccessibilityUIElementsKey: self});
+
     return YES;
 }
 
@@ -253,7 +257,9 @@ typedef NS_ENUM(NSUInteger, _SRRecorderControlButtonTag)
     [self updateTrackingAreas];
     [self setToolTip:SRLoc(@"Click to record shortcut")];
     [self setNeedsDisplay:YES];
+
     NSAccessibilityPostNotification(self, NSAccessibilityTitleChangedNotification);
+    NSAccessibilityPostNotificationWithUserInfo(self, NSAccessibilityLayoutChangedNotification, @{NSAccessibilityUIElementsKey: self});
 
     if (self.window.firstResponder == self && ![self canBecomeKeyView])
         [self.window makeFirstResponder:nil];
